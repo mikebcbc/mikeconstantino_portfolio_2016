@@ -1,0 +1,72 @@
+header {
+	display: flex;
+	flex-direction: column;
+	background:     linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ), url("../imgs/header-laptop-background.jpg") center no-repeat;
+	background-size: cover;
+	height: calc(100vh - 40px);
+	padding: 20px;
+	justify-content: space-between;
+	align-items: center;
+	@media (min-width: 769px) {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.logo-container {
+		margin-left: auto;
+		margin-right: auto;
+		@media (min-width: 769px) {
+			margin-right: initial;
+		}
+	}
+	.header-text-container {
+		hr {
+			border-color: $yellow;
+			@media (max-width: 769px) {
+				width: 100%;
+			}
+		}
+	}
+	button {
+		background-color: transparent;
+		border: 2px solid $yellow;
+		width: 75%;
+		margin: 0 auto;
+		color: $yellow;
+		font-size: 1.6em;
+		padding: 10px;
+		text-transform: uppercase;
+		font-family: $lato;
+		font-weight: 100;
+		@media (min-width: 769px) {
+			display: none;
+		}
+	}
+	#name {
+		color: $yellow;
+		text-align: center;
+		font-family: $quincho;
+		font-weight: 100;
+		line-height: 100%;
+		@media (min-width: 769px) {
+			//font-size: 5em;
+			text-align: left;
+		}
+	}
+	#job-title-first, #job-title-last {
+		font-family: $raleway;
+		text-transform: uppercase;
+		color: $grey;
+		font-size: 3em;
+		text-align: center;
+		@media (min-width: 769px) {
+			text-align: left;
+			line-height: 100px;
+		}
+	}
+	#job-title-last {
+		font-size: 3.5em;
+	}
+}

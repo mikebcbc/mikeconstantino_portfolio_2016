@@ -467,16 +467,32 @@ header {
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../imgs/header-laptop-background.jpg") center no-repeat;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/header-laptop-background.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/header-laptop-background.jpg") center no-repeat;
+  background-size: cover; }
   .section-1 .split-section {
     width: 50%;
     height: 100%; }
+    .section-1 .split-section.who-am-i {
+      z-index: 2;
+      position: relative; }
+      .section-1 .split-section.who-am-i:after {
+        overflow: hidden;
+        -webkit-transform: skewX(-50deg);
+            -ms-transform: skewX(-50deg);
+                transform: skewX(-50deg);
+        content: '';
+        height: 612px;
+        position: absolute;
+        left: -55vw;
+        top: 0;
+        z-index: -1;
+        border-left: 107vw solid #FFB800; }
     .section-1 .split-section.where-am-i {
       position: relative;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../imgs/header-laptop-background.jpg") center no-repeat;
-      background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/header-laptop-background.jpg") center no-repeat;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/header-laptop-background.jpg") center no-repeat;
-      background-size: cover; }
+      z-index: 2; }
       .section-1 .split-section.where-am-i #whereami-h2 {
         -webkit-transform: rotate(-40deg);
             -ms-transform: rotate(-40deg);

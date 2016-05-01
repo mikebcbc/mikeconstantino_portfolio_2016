@@ -21,7 +21,8 @@
 			    left: -55vw;
 			    top: 0;
 			    z-index: -1;
-			    border-left: 107vw solid $yellow;
+			    border-left: 103vw solid $yellow;
+			    border-right: 20px solid $grey;
 			}
 		}
 		&.where-am-i {
@@ -30,21 +31,16 @@
 		    #whereami-h2 {
 		    	transform: rotate(-40deg);
 		    	position: absolute;
-		    	top: 32%;
+		    	top: 28.5%;
+		    	padding-top: 20px;
 		    	color: $grey;
+		    	text-transform: uppercase;
 		    }
 		    img {
 		    	position: absolute;
-		    	bottom: 30px;
-		    	right: 30px;
+		    	bottom: 20px;
+		    	right: 20px;
 		    }
-		    &:before {
-			    content: '';
-			    display: inline-block;
-			    border: 10px solid $grey;
-			    height: 100%;
-			    transform: skewX(-50deg);
-			}
 		}
 	}
 }

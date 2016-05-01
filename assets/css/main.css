@@ -369,8 +369,9 @@ body {
     body {
       font-size: 32px; } }
 
-h1 {
-  margin: 0; }
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: "Raleway", sans-serif; }
 
 section {
   height: 100vh; }
@@ -489,7 +490,8 @@ header {
         left: -55vw;
         top: 0;
         z-index: -1;
-        border-left: 107vw solid #FFB800; }
+        border-left: 103vw solid #FFB800;
+        border-right: 20px solid #E3E4E4; }
     .section-1 .split-section.where-am-i {
       position: relative;
       z-index: 2; }
@@ -498,17 +500,11 @@ header {
             -ms-transform: rotate(-40deg);
                 transform: rotate(-40deg);
         position: absolute;
-        top: 32%;
-        color: #E3E4E4; }
+        top: 28.5%;
+        padding-top: 20px;
+        color: #E3E4E4;
+        text-transform: uppercase; }
       .section-1 .split-section.where-am-i img {
         position: absolute;
-        bottom: 30px;
-        right: 30px; }
-      .section-1 .split-section.where-am-i:before {
-        content: '';
-        display: inline-block;
-        border: 10px solid #E3E4E4;
-        height: 100%;
-        -webkit-transform: skewX(-50deg);
-            -ms-transform: skewX(-50deg);
-                transform: skewX(-50deg); }
+        bottom: 20px;
+        right: 20px; }

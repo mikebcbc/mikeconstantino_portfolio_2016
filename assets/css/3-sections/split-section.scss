@@ -1,45 +1,70 @@
 .section-1 {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	background:     linear-gradient(
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, 0.7)
     ), url("../imgs/header-laptop-background.jpg") center no-repeat;
     background-size: cover;
+	@media (min-width: 769px) {
+		flex-direction: row;
+	}
 	.split-section {
-		width: 50%;
-		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
+		height: 50%;
+		width: 100%;
+		@media (min-width: 769px) {
+			width: 50%;
+			height: 100%;
+		}
+		h2 {
+			text-transform: uppercase;
+		}
 		&.who-am-i {
-			z-index: 2;
-			position: relative;
-			&:after {
-				overflow: hidden;
-			    transform: skewX(-50deg);
-			    content: '';
-			    height: 612px;
-			    position: absolute;
-			    left: -55vw;
-			    top: 0;
-			    z-index: -1;
-			    border-left: 103vw solid $yellow;
-			    border-right: 20px solid $grey;
+			background-color: $yellow;
+			border-bottom: 10px solid $grey;
+			@media (min-width: 769px) {
+				z-index: 2;
+				position: relative;
+				background-color: initial;
+				border-bottom: none;
+				&:after {
+					overflow: hidden;
+				    transform: skewX(-50deg);
+				    content: '';
+				    height: 612px;
+				    position: absolute;
+				    left: -55vw;
+				    top: 0;
+				    z-index: -1;
+				    border-left: 103vw solid $yellow;
+				    border-right: 20px solid $grey;
+				}
 			}
 		}
 		&.where-am-i {
-			position: relative;
-		    z-index: 2;
+			@media (min-width: 769px) {
+				position: relative;
+			    z-index: 2;
+			    img {
+			    	position: absolute;
+			    	bottom: 20px;
+			    	right: 20px;
+			    	width: 50%;
+		    	}
+			}
 		    #whereami-h2 {
-		    	transform: rotate(-40deg);
-		    	position: absolute;
-		    	top: 28.5%;
-		    	padding-top: 20px;
 		    	color: $grey;
-		    	text-transform: uppercase;
-		    }
-		    img {
-		    	position: absolute;
-		    	bottom: 20px;
-		    	right: 20px;
+				@media (min-width: 769px) {
+			    	transform: rotate(-40deg);
+			    	position: absolute;
+			    	top: 28.5%;
+			    	padding-top: 20px;
+			    }
 		    }
 		}
 	}
